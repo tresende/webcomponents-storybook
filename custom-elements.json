@@ -1,0 +1,34 @@
+{
+  "version": 1.2,
+  "tags": [
+    {
+      "name": "borc-button",
+      "path": "./src/components/button/button.tsx",
+      "description": "",
+      "attributes": [
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "description": "",
+          "required": false
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "description": "",
+          "required": false
+        }
+      ],
+      "events": [
+        {
+          "name": "borcEvent",
+          "description": ""
+        }
+      ],
+      "methods": [],
+      "slots": [],
+      "cssProperties": [],
+      "cssParts": []
+    }
+  ]
+}
