@@ -2,7 +2,7 @@
   "version": 1.2,
   "tags": [
     {
-      "name": "borc-button",
+      "name": "reppu-button",
       "path": "./src/components/atoms/button/button.tsx",
       "description": "",
       "attributes": [],
@@ -13,11 +13,16 @@
       "cssParts": []
     },
     {
-      "name": "borc-select",
-      "path": "./src/components/select/select.tsx",
+      "name": "reppu-select",
+      "path": "./src/components/atoms/select/select.tsx",
       "description": "",
       "attributes": [],
-      "events": [],
+      "events": [
+        {
+          "name": "change",
+          "description": ""
+        }
+      ],
       "methods": [],
       "slots": [],
       "cssProperties": [],

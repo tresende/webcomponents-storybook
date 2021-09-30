@@ -15,12 +15,24 @@
   <body>
     <script>
       window.onload = function () {
-        let el = document.getElementById('button')
-        el.addEventListener('borcEvent', function (event) {
+        let button = document.getElementById('button')
+        button.addEventListener('borcEvent', (event) => {
+          console.log(event.detail.value)
+        })
+
+        let select = document.getElementById('select')
+        select.addEventListener('change', (event) => {
           console.log(event.detail.value)
         })
       }
     </script>
-    <borc-button disabled id="button" onclick="console.log(1)">Beer or coffee</borc-button>
+    <reppu-button disabled id="button" onclick="console.log(1)">Beer or coffee</reppu-button>
+    <reppu-select value="3" id="select" title="Texto">
+      <option value="1">1 Participante</option>
+      <option value="2">2 Participantes</option>
+      <option value="3">3 Participantes</option>
+      <option value="4">4 Participantes</option>
+      <option value="5">5 Participantes</option>
+    </reppu-select>
   </body>
 </html>

@@ -8,7 +8,6 @@ export const getElementAttributes = (nodeMap: NamedNodeMap) => {
           const property = nodeMap[current]
           return {
             ...props,
-            disabled: true,
             [property.name]: property.value ? property.value : true
           }
         }

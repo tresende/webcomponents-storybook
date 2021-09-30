@@ -6,45 +6,46 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface BorcButton {
+    interface ReppuButton {
     }
-    interface BorcSelect {
+    interface ReppuSelect {
     }
 }
 declare global {
-    interface HTMLBorcButtonElement extends Components.BorcButton, HTMLStencilElement {
+    interface HTMLReppuButtonElement extends Components.ReppuButton, HTMLStencilElement {
     }
-    var HTMLBorcButtonElement: {
-        prototype: HTMLBorcButtonElement;
-        new (): HTMLBorcButtonElement;
+    var HTMLReppuButtonElement: {
+        prototype: HTMLReppuButtonElement;
+        new (): HTMLReppuButtonElement;
     };
-    interface HTMLBorcSelectElement extends Components.BorcSelect, HTMLStencilElement {
+    interface HTMLReppuSelectElement extends Components.ReppuSelect, HTMLStencilElement {
     }
-    var HTMLBorcSelectElement: {
-        prototype: HTMLBorcSelectElement;
-        new (): HTMLBorcSelectElement;
+    var HTMLReppuSelectElement: {
+        prototype: HTMLReppuSelectElement;
+        new (): HTMLReppuSelectElement;
     };
     interface HTMLElementTagNameMap {
-        "borc-button": HTMLBorcButtonElement;
-        "borc-select": HTMLBorcSelectElement;
+        "reppu-button": HTMLReppuButtonElement;
+        "reppu-select": HTMLReppuSelectElement;
     }
 }
 declare namespace LocalJSX {
-    interface BorcButton {
+    interface ReppuButton {
     }
-    interface BorcSelect {
+    interface ReppuSelect {
+        "onChange"?: (event: CustomEvent<any>) => void;
     }
     interface IntrinsicElements {
-        "borc-button": BorcButton;
-        "borc-select": BorcSelect;
+        "reppu-button": ReppuButton;
+        "reppu-select": ReppuSelect;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "borc-button": LocalJSX.BorcButton & JSXBase.HTMLAttributes<HTMLBorcButtonElement>;
-            "borc-select": LocalJSX.BorcSelect & JSXBase.HTMLAttributes<HTMLBorcSelectElement>;
+            "reppu-button": LocalJSX.ReppuButton & JSXBase.HTMLAttributes<HTMLReppuButtonElement>;
+            "reppu-select": LocalJSX.ReppuSelect & JSXBase.HTMLAttributes<HTMLReppuSelectElement>;
         }
     }
 }

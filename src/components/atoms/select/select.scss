@@ -1,0 +1,32 @@
+:host {
+  .wrapper {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '❯';
+      color: $gray-900;
+      font-size: $font-size-medium-large;
+      top: 10px;
+      right: 20px;
+      pointer-events: none;
+      transform: rotate(90deg);
+    }
+  }
+
+  select {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    padding: $spacing-normal $spacing-medium;
+    border: 1px solid $gray-300;
+    border-radius: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add some styling */
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}

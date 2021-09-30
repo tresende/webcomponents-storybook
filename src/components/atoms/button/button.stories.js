@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Atoms/Button',
-  component: 'borc-button',
+  component: 'reppu-button',
   argTypes: {
     text: { control: { type: 'text' } }
   }
@@ -12,8 +12,8 @@ export default {
 const defaultAction = action('clicked')
 
 export const Default = ({ text }) => html`
-  <div style="width:300px">
-    <borc-button @click=${(e) => defaultAction(e)}">${text}</borc-button>
+  <div style="width:500px">
+    <reppu-button @click=${(e) => defaultAction(e)}">${text}</reppu-button>
   </div>
 `
 
@@ -22,8 +22,8 @@ Default.args = {
 }
 
 export const Disabled = ({ text }) => html`
-  <div style="width:300px">
-    <borc-button @borcEvent=${(e) => defaultAction(e)} disabled>${text}</borc-button>
+  <div style="width:500px">
+    <reppu-button @borcEvent=${(e) => defaultAction(e)} disabled>${text}</reppu-button>
   </div>
 `
 

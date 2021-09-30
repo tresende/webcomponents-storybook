@@ -2,19 +2,25 @@
   display: block;
 
   button {
-    font-weight: bold;
-    letter-spacing: 1px;
-    width: 100%;
-    cursor: pointer;
-    border-radius: $border-radius;
     background-color: $primary-color;
-    padding: $spacings-medium;
-    font-size: $font-size-medium;
     border: none;
-    font-weight: bold;
-
+    border-radius: 80px;
+    color: $gray-900;
+    cursor: pointer;
+    font-size: $font-size-normal;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: $font-line-height-medium;
+    padding: $spacing-normal $spacing-medium;
+    width: 100%;
     &:hover {
-      background-color: darken($primary-color, 5%);
+      background-color: lighten($primary-color, 5%);
+    }
+    &:disabled {
+      cursor: default;
+      &:hover {
+        background-color: $primary-color;
+      }
     }
   }
 }

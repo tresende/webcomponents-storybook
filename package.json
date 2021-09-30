@@ -1,7 +1,10 @@
 {
-  "name": "borc-components",
-  "version": "0.0.2",
-  "description": "Beer or Coffee Web components",
+  "author": "Beer or Coffee",
+  "license": "MIT",
+  "dependencies": {},
+  "name": "reppu",
+  "version": "1.0.0",
+  "description": "Reppu, Beer or Coffee design system",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -46,8 +49,6 @@
     "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^4.2.0",
     "jest": "^26.2.2",
     "lit-html": "^1.2.1",
     "npm-run-all": "^4.1.5",
@@ -55,8 +56,5 @@
     "puppeteer": "2.1.1",
     "webpack": "^4.44.1",
     "write-file-webpack-plugin": "^4.5.1"
-  },
-  "author": "Thiago Resende",
-  "license": "MIT",
-  "dependencies": {}
+  }
 }
