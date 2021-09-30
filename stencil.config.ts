@@ -57,7 +57,11 @@ async function generateCustomElementsJson(docsData: JsonDocs) {
 export const config: Config = {
   namespace: 'stencil-boilerplate',
   taskQueue: 'async',
-  plugins: [sass()],
+  plugins: [
+    sass({
+      injectGlobalPaths: ['src/global/variables.scss']
+    })
+  ],
   outputTargets: [
     {
       type: 'dist',

@@ -4,7 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
 
+    <link rel="stylesheet" href="https://d3p07km83uit4h.cloudfront.net/portal/styles/main.css" />
     <script type="module" src="/build/stencil-boilerplate.esm.js"></script>
     <script nomodule src="/build/stencil-boilerplate.js"></script>
   </head>
@@ -17,6 +21,6 @@
         })
       }
     </script>
-    <borc-button id="button" onclick="console.log(1)">Beer or coffee</borc-button>
+    <borc-button disabled id="button" onclick="console.log(1)">Beer or coffee</borc-button>
   </body>
 </html>

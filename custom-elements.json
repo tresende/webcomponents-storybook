@@ -3,28 +3,21 @@
   "tags": [
     {
       "name": "borc-button",
-      "path": "./src/components/button/button.tsx",
+      "path": "./src/components/atoms/button/button.tsx",
       "description": "",
-      "attributes": [
-        {
-          "name": "enabled",
-          "type": "boolean",
-          "description": "",
-          "required": false
-        },
-        {
-          "name": "text",
-          "type": "string",
-          "description": "",
-          "required": false
-        }
-      ],
-      "events": [
-        {
-          "name": "borcEvent",
-          "description": ""
-        }
-      ],
+      "attributes": [],
+      "events": [],
+      "methods": [],
+      "slots": [],
+      "cssProperties": [],
+      "cssParts": []
+    },
+    {
+      "name": "borc-select",
+      "path": "./src/components/select/select.tsx",
+      "description": "",
+      "attributes": [],
+      "events": [],
       "methods": [],
       "slots": [],
       "cssProperties": [],

@@ -7,8 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface BorcButton {
-        "enabled": boolean;
-        "text": string;
+    }
+    interface BorcSelect {
     }
 }
 declare global {
@@ -18,18 +18,25 @@ declare global {
         prototype: HTMLBorcButtonElement;
         new (): HTMLBorcButtonElement;
     };
+    interface HTMLBorcSelectElement extends Components.BorcSelect, HTMLStencilElement {
+    }
+    var HTMLBorcSelectElement: {
+        prototype: HTMLBorcSelectElement;
+        new (): HTMLBorcSelectElement;
+    };
     interface HTMLElementTagNameMap {
         "borc-button": HTMLBorcButtonElement;
+        "borc-select": HTMLBorcSelectElement;
     }
 }
 declare namespace LocalJSX {
     interface BorcButton {
-        "enabled"?: boolean;
-        "onBorcEvent"?: (event: CustomEvent<any>) => void;
-        "text"?: string;
+    }
+    interface BorcSelect {
     }
     interface IntrinsicElements {
         "borc-button": BorcButton;
+        "borc-select": BorcSelect;
     }
 }
 export { LocalJSX as JSX };
@@ -37,6 +44,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "borc-button": LocalJSX.BorcButton & JSXBase.HTMLAttributes<HTMLBorcButtonElement>;
+            "borc-select": LocalJSX.BorcSelect & JSXBase.HTMLAttributes<HTMLBorcSelectElement>;
         }
     }
 }
