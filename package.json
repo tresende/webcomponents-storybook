@@ -12,14 +12,14 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/stencil-boilerplate/stencil-boilerplate.js",
+  "unpkg": "dist/reppu/reppu.js",
   "files": [
     "dist/",
     "loader/"
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "copy": "cp -R ./dist/stencil-boilerplate ./storybook-static",
+    "copy": "cp -R ./dist/reppu ./storybook-static",
     "build-storybook": "build-storybook",
     "build-site": "npm run build && npm run build-storybook && npm run copy",
     "dev": "stencil build --watch --serve",

@@ -55,7 +55,7 @@ async function generateCustomElementsJson(docsData: JsonDocs) {
 }
 
 export const config: Config = {
-  namespace: 'stencil-boilerplate',
+  namespace: 'reppu',
   taskQueue: 'async',
   plugins: [
     sass({
