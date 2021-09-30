@@ -1,4 +1,4 @@
-import { Component, h, Event, Element, EventEmitter } from '@stencil/core'
+import { Component, h, Event, Element, EventEmitter, Prop } from '@stencil/core'
 import { getElementAttributes } from '../../../utils/getElementAttributes'
 
 @Component({
@@ -9,6 +9,8 @@ import { getElementAttributes } from '../../../utils/getElementAttributes'
 export class Select {
   @Element() host: HTMLReppuSelectElement
   @Event() change: EventEmitter
+  @Prop() label?: string
+
   private children: Element[]
 
   componentWillLoad() {
@@ -23,9 +25,11 @@ export class Select {
 
   render() {
     const properties = getElementAttributes(this.host.attributes)
+    const hasLabel = !!this.label
     return (
       <host>
-        <div class="wrapper">
+        {hasLabel && <label>{this.label}</label>}
+        <div class={`wrapper${hasLabel && '__label--visible'}`}>
           <select {...properties} onChange={this.handleChange.bind(this)}>
             {this.children.map((child) => {
               const value = child.getAttribute('value')

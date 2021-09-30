@@ -11,6 +11,9 @@
       pointer-events: none;
       transform: rotate(90deg);
     }
+    &__label--visible {
+      margin-top: $spacing-normal;
+    }
   }
 
   select {
@@ -28,5 +31,12 @@
     &::-ms-expand {
       display: none;
     }
+  }
+
+  label {
+    font-weight: bold;
+    font-size: $spacing-normal;
+    line-height: 24px;
+    color: $gray-900;
   }
 }

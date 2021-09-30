@@ -5,15 +5,15 @@ export default {
   title: 'Atoms/Select',
   component: 'reppu-select', // which is also found in the `custom-elements.json`
   argTypes: {
-    title: { control: { type: 'text' } }
+    label: { control: { type: 'text' } }
   }
 }
 
 const defaultAction = action('changed')
 
-export const basic = ({ title }) => html`
-  <div style="width:200px">
-    <reppu-select title="${title}" @change=${(e) => defaultAction(e)}">
+export const basic = ({ label }) => html`
+  <div style="width:300px">
+    <reppu-select label="${label}" @change=${(e) => defaultAction(e)}">
     <option value="1">1 Participante</option>
     <option value="2">2 Participantes</option>
     <option value="3">3 Participantes</option>
@@ -23,5 +23,5 @@ export const basic = ({ title }) => html`
   </div>
 `
 basic.args = {
-  title: 'Quantidade de participantes'
+  label: 'Quantidade de participantes'
 }

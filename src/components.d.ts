@@ -9,6 +9,7 @@ export namespace Components {
     interface ReppuButton {
     }
     interface ReppuSelect {
+        "label"?: string;
     }
 }
 declare global {
@@ -33,6 +34,7 @@ declare namespace LocalJSX {
     interface ReppuButton {
     }
     interface ReppuSelect {
+        "label"?: string;
         "onChange"?: (event: CustomEvent<any>) => void;
     }
     interface IntrinsicElements {

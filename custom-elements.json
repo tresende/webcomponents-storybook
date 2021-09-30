@@ -16,7 +16,14 @@
       "name": "reppu-select",
       "path": "./src/components/atoms/select/select.tsx",
       "description": "",
-      "attributes": [],
+      "attributes": [
+        {
+          "name": "label",
+          "type": "string",
+          "description": "",
+          "required": false
+        }
+      ],
       "events": [
         {
           "name": "change",
