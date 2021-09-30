@@ -1,42 +1,40 @@
-:host {
-  .wrapper {
+.wrapper {
+  &__label--visible {
+    display: block;
+    margin-bottom: $spacing-normal;
+  }
+
+  .select-wrapper {
     position: relative;
     &:after {
-      position: absolute;
-      content: '❯';
       color: $gray-900;
+      content: '❯';
       font-size: $font-size-medium-large;
-      top: 10px;
-      right: 20px;
       pointer-events: none;
+      position: absolute;
+      right: 20px;
+      top: 10px;
       transform: rotate(90deg);
-    }
-    &__label--visible {
-      margin-top: $spacing-normal;
     }
   }
 
   select {
-    cursor: pointer;
-    position: relative;
-    width: 100%;
-    padding: $spacing-normal $spacing-medium;
+    appearance: none;
     border: 1px solid $gray-300;
     border-radius: 40px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    /* Add some styling */
-
+    cursor: pointer;
+    padding: $spacing-normal $spacing-medium;
+    position: relative;
+    width: 100%;
     &::-ms-expand {
       display: none;
     }
   }
 
   label {
-    font-weight: bold;
-    font-size: $spacing-normal;
-    line-height: 24px;
     color: $gray-900;
+    line-height: 24px;
+    font-size: $spacing-normal;
+    font-weight: bold;
   }
 }
