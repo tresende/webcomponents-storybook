@@ -29,8 +29,8 @@ export class Select {
     return (
       <host class="wrapper">
         {hasLabel && <label class="wrapper__label--visible">{this.label}</label>}
-        <div class="select-wrapper">
-          <select {...properties} onChange={this.handleChange.bind(this)}>
+        <div class="wrapper__container">
+          <select class="wrapper__select" {...properties} onChange={this.handleChange.bind(this)}>
             {this.children.map((child) => {
               const value = child.getAttribute('value')
               return (
