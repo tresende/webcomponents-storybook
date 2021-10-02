@@ -55,6 +55,7 @@ async function generateCustomElementsJson(docsData: JsonDocs) {
 }
 
 export const config: Config = {
+  buildEs5: true,
   namespace: 'reppu',
   taskQueue: 'async',
   plugins: [

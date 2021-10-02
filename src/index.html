@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://d3p07km83uit4h.cloudfront.net/portal/styles/main.css" />
-    <script type="module" src="/build/reppu.esm.js"></script>
-    <script nomodule src="/build/reppu.js"></script>
-    <style>
-      main {
-        max-width: 700px;
-        margin: 0 auto;
-        padding: 2rem;
-        margin-top: 100px;
-        border-radius: 16px;
-        box-shadow: 0 0 31px 0 rgb(0 0 0 / 16%), 0 0 20px 0 rgb(0 0 0 / 4%);
-      }
-    </style>
-  </head>
-  <body>
-    <script>
-      window.onload = function () {
-        let button = document.getElementById('button')
-        button.addEventListener('borcEvent', (event) => {
-          console.log(event.detail.value)
-        })
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Component Starter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
 
-        let select = document.getElementById('select')
-        select.addEventListener('change', (event) => {
-          console.log(event.detail.value)
-        })
-      }
-    </script>
-    <main>
-      <reppu-button id="button" onclick="console.log(1)">Beer or coffee</reppu-button>
-      <reppu-select label="Quantidade de participantes" value="3" id="select" title="Texto">
-        <option value="1">1 Participante</option>
-        <option value="2">2 Participantes</option>
-        <option value="3">3 Participantes</option>
-        <option value="4">4 Participantes</option>
-        <option value="5">5 Participantes</option>
-      </reppu-select>
-    </main>
-  </body>
+  <link rel="stylesheet" href="https://d3p07km83uit4h.cloudfront.net/portal/styles/main.css" />
+  <script src="/build/reppu.js"></script>
+  <style>
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2rem;
+      margin-top: 100px;
+      border-radius: 16px;
+      box-shadow: 0 0 31px 0 rgb(0 0 0 / 16%), 0 0 20px 0 rgb(0 0 0 / 4%);
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    window.onload = function () {
+      let button = document.getElementById('button')
+      button.addEventListener('borcEvent', (event) => {
+        console.log(event.detail.value)
+      })
+
+      let select = document.getElementById('select')
+      select.addEventListener('change', (event) => {
+        console.log(event.detail.value)
+      })
+    }
+  </script>
+  <main>
+    <reppu-button id="button" onclick="console.log(1)">Beer or coffee</reppu-button>
+    <reppu-select label="Quantidade de participantes" value="3" id="select" title="Texto">
+      <option value="1">1 Participante</option>
+      <option value="2">2 Participantes</option>
+      <option value="3">3 Participantes</option>
+      <option value="4">4 Participantes</option>
+      <option value="5">5 Participantes</option>
+    </reppu-select>
+  </main>
+</body>
+
 </html>
